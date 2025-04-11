@@ -9,7 +9,7 @@ export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("All");
   const getTodos = async () => {
-    let res = await fetch("my-backend-production-17a5.up.railway.app/api/todo/get-todo", {
+    let res = await fetch("https://my-backend-production-17a5.up.railway.app/api/todo/get-todo", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export const TodoProvider = ({ children }) => {
   };
   const updateImportant = async (id, important)=> {
     try {
-      let res = await fetch(`my-backend-production-17a5.up.railway.app/api/todo/update-important-status/${id}`, {
+      let res = await fetch(`https://my-backend-production-17a5.up.railway.app/api/todo/update-important-status/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export const TodoProvider = ({ children }) => {
 
   // Add Todo
   const addTodo = async (title, checked) => {
-    let res = await fetch("my-backend-production-17a5.up.railway.app/api/todo/add-todo", {
+    let res = await fetch("https://my-backend-production-17a5.up.railway.app/api/todo/add-todo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export const TodoProvider = ({ children }) => {
 
   // Update Todo (Toggle Completion or Edit)
   const updateTodo = async (id, title) => {
-    let res = await fetch(`my-backend-production-17a5.up.railway.app/api/todo/update-todo/${id}`, {
+    let res = await fetch(`https://my-backend-production-17a5.up.railway.app/api/todo/update-todo/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export const TodoProvider = ({ children }) => {
 
   const updateCheck = async (id,checked)=>{
     try {
-      let res = await fetch(`my-backend-production-17a5.up.railway.app/api/todo/update-checked-status/${id}`, {
+      let res = await fetch(`https://my-backend-production-17a5.up.railway.app/api/todo/update-checked-status/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const TodoProvider = ({ children }) => {
 
   // Delete Todo
   const deleteTodo = async (id) => {
-    let res = await fetch(`my-backend-production-17a5.up.railway.app/api/todo/delete-todo/${id}`, {
+    let res = await fetch(`https://my-backend-production-17a5.up.railway.app/api/todo/delete-todo/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

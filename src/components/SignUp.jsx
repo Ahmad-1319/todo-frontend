@@ -19,7 +19,7 @@ const Signup = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-  let res= await fetch("my-backend-production-17a5.up.railway.app/api/auth/Sign-Up",{
+  let res= await fetch("https://my-backend-production-17a5.up.railway.app/api/auth/Sign-Up",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
